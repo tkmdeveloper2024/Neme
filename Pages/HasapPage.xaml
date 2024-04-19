@@ -1,0 +1,650 @@
+﻿<Page x:Class="Neme.Pages.HasapPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Neme.Pages"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      mc:Ignorable="d" 
+       MinHeight="610"       
+      MinWidth="880" Loaded="Page_Loaded"
+      Title="">
+    <Border  
+                Margin="10 10 0 10"
+                Background="White">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" >
+            <Grid > 
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                 <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+               
+                    <Grid Grid.Column="0"
+                          Margin="0 10 0 0"
+                      >
+                    <StackPanel Orientation="Vertical" >
+                        <Grid  VerticalAlignment="Top"
+                               HorizontalAlignment="Stretch"
+                               
+                               Margin="10 10 10 0"
+                                MinWidth="400"
+                                Height="50"                               
+                                Background="#EDEDED" >
+                            <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="20 0 0 0"
+                            FontSize="16"
+                            Foreground="#505470"
+                            FontFamily="DM Sans"
+                            >
+                            Müdirlik
+                            </TextBlock>
+                                <materialDesign:PackIcon Kind="Edit" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 80 0"
+                                                 />
+                                <Button
+                                Name="Save2"
+                                Click="Save2_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 80 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Plus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 50 0"
+                                                 />
+                            <Button
+                                Name="MudirlikAddbtn"
+                                Click="MudirlikAddbtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 50 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                            </Button>
+                            <materialDesign:PackIcon Kind="Minus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 20 0"
+                                                 />
+                            <Button
+                                Name="MudirlikRemovebtn"
+                                Click="MudirlikRemovebtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 20 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                            </Button>
+                        </Grid>
+                        <Border CornerRadius="10"
+                            BorderBrush="LightGray"
+                            Background="LightGray"
+                            Margin="10 10 10 10"
+                            Width="auto"
+                            Height="150"                            
+                            MinHeight="150"
+                            >
+                            <Border CornerRadius="10"
+                             Background="White"                              
+                            Margin="1"
+                            >
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                <Grid Margin="5 5 10 5 "
+                              >
+                                    <ListView Margin="5" Name="MudirlikList"  SelectionChanged="MudirlikList_SelectionChanged">
+                                           
+                                    </ListView>
+
+
+                                </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                        </Border>
+                        <Grid VerticalAlignment="Bottom"
+                          HorizontalAlignment="Stretch">
+                            
+                        </Grid>
+                    </StackPanel>
+                </Grid>
+
+                    <Grid Grid.Column="1"
+                           Margin="0 10 0 0"
+                      >
+                        <StackPanel Orientation="Vertical" >
+                            <Grid  VerticalAlignment="Top"
+                               HorizontalAlignment="Stretch"
+                               
+                               Margin="10 10 10 0"
+                                MinWidth="400"
+                                Height="50"                               
+                                Background="#EDEDED" >
+                                <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="20 0 0 0"
+                            FontSize="16"
+                            Foreground="#505470"
+                            FontFamily="DM Sans"
+                            >
+                            Bölüm
+                                </TextBlock>
+                                <materialDesign:PackIcon Kind="Edit" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 80 0"
+                                                 />
+                                <Button Name="Save3"
+                                        Click="Save3_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 80 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Plus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 50 0"
+                                                 />
+                                <Button Name="BolumAddbtn"
+                                        Click="BolumAddbtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 50 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Minus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 20 0"
+                                                 />
+                                <Button
+                                    Name="BolumRemovebtn"
+                                    Click="BolumRemovebtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 20 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                            </Grid>
+                            <Border CornerRadius="10"
+                            BorderBrush="LightGray"
+                            Background="LightGray"
+                            Margin="10 10 10 10"
+                            Width="auto"
+                            Height="150"
+                            
+                            >
+                                <Border CornerRadius="10"
+                             Background="White"                              
+                            Margin="1"
+                            >
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <Grid Margin="5 5 10 5 "
+                              >
+                                            <ListView Margin="5" Name="BolumList" SelectionChanged="BolumList_SelectionChanged">
+                                               
+                                            </ListView>
+
+
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                            </Border>
+                            <Grid VerticalAlignment="Bottom"
+                          HorizontalAlignment="Stretch">
+                               
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                   
+                    <Grid Grid.Column="0"
+                      >
+                        <StackPanel Orientation="Vertical" >
+                            <Grid  VerticalAlignment="Top"
+                               HorizontalAlignment="Stretch"
+                               
+                               Margin="10 10 10 0"
+                                MinWidth="400"
+                                Height="50"                               
+                                Background="#EDEDED" >
+                                <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="20 0 0 0"
+                            FontSize="16"
+                            Foreground="#505470"
+                            FontFamily="DM Sans"
+                            >
+                            Bölümçe
+                                </TextBlock>
+                                <materialDesign:PackIcon Kind="Edit" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 80 0"
+                                                 />
+                                <Button
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 80 0"
+                            BorderBrush="Transparent"
+                                    Name="Save4"
+                                    Click="Save4_Click"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Plus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 50 0"
+                                                 />
+                                <Button
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 50 0"
+                            BorderBrush="Transparent"
+                                    Name="BolumceAdd"
+                                    Click="BolumceAdd_Click"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Minus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 20 0"
+                                                 />
+                                <Button
+                                    Name="BolumceRemovebtn"
+                                    Click="BolumceRemovebtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 20 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                            </Grid>
+                            <Border CornerRadius="10"
+                            BorderBrush="LightGray"
+                            Background="LightGray"
+                            Margin="10 10 10 10"
+                            Width="auto"
+                            Height="150"
+                         
+                            >
+                                <Border CornerRadius="10"
+                             Background="White"                              
+                            Margin="1"
+                            >
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <Grid Margin="5 5 10 5 "
+                              >
+                                            <ListView Margin="5" Name="BolumceList" SelectionChanged="BolumceList_SelectionChanged" >
+                                              
+                                            </ListView>
+
+
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                            </Border>
+                            <Grid VerticalAlignment="Bottom"
+                          HorizontalAlignment="Stretch">
+                               
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+                    <Grid Grid.Column="1"
+                      >
+                        <StackPanel Orientation="Vertical" >
+                            <Grid  VerticalAlignment="Top"
+                               HorizontalAlignment="Stretch"
+                               
+                               Margin="10 10 10 0"
+                                MinWidth="400"
+                                Height="50"                               
+                                Background="#EDEDED" >
+                                <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="20 0 0 0"
+                            FontSize="16"
+                            Foreground="#505470"
+                            FontFamily="DM Sans"
+                            >
+                            Topar
+                                </TextBlock>
+                                <materialDesign:PackIcon Kind="Edit" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 80 0"
+                                                 />
+                                <Button
+                                    Name="Save5"
+                                    Click="Save5_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 80 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Plus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 50 0"
+                                                 />
+                                <Button
+                                    Name="ToparAddbtn"
+                                    Click="ToparAddbtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 50 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Minus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 20 0"
+                                                 />
+                                <Button
+                                    Name="ToparRemovebtn"
+                                    Click="ToparRemovebtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 20 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                            </Grid>
+                            <Border CornerRadius="10"
+                            BorderBrush="LightGray"
+                            Background="LightGray"
+                            Margin="10 10 10 10"
+                            Width="auto"
+                            Height="150"
+                          
+                            >
+                                <Border CornerRadius="10"
+                             Background="White"                              
+                            Margin="1"
+                            >
+                                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                        <Grid Margin="5 5 10 5 "
+                              >
+                                            <ListView Margin="5"  Name="ToparList" SelectionChanged="ToparList_SelectionChanged">
+                                                
+                                            </ListView>
+
+
+                                        </Grid>
+                                    </ScrollViewer>
+                                </Border>
+                            </Border>
+                            <Grid VerticalAlignment="Bottom"
+                          HorizontalAlignment="Stretch">
+                             
+                            </Grid>
+                        </StackPanel>
+                    </Grid>
+
+
+
+
+                </Grid>                
+                <Grid Grid.Row="2">
+               
+                        <StackPanel Orientation="Vertical" Height="300" >
+                            <Grid  VerticalAlignment="Top"
+                               HorizontalAlignment="Stretch"
+                               
+                               Margin="10 10 10 0"
+                                MinWidth="400"
+                                Height="50"                               
+                                Background="#EDEDED" >
+                                <TextBlock
+                            HorizontalAlignment="Left"
+                            VerticalAlignment="Center"
+                            Margin="20 0 0 0"
+                            FontSize="16"
+                            Foreground="#505470"
+                            FontFamily="DM Sans"
+                            >
+                            Wezipeler
+                                </TextBlock>
+                            <materialDesign:PackIcon Kind="Edit" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 80 0"
+                                                 />
+                            <Button
+                                    Name="Save6"
+                                    Click="Save6_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 80 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                            </Button>
+
+                            <materialDesign:PackIcon Kind="Plus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 50 0"
+                                                 />
+                                <Button
+                                    Name="WezipelerAddbtn"
+                                    Click="WezipelerAddbtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 50 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                                <materialDesign:PackIcon Kind="Minus" Width="25" Height="25" 
+                                                 VerticalAlignment="Stretch"
+                                                 HorizontalAlignment="Right"
+                                                 Margin="0 0 20 0"
+                                                 />
+                                <Button
+                                    Name="WezipelerRemovebtn"
+                                    Click="WezipelerRemovebtn_Click"
+                            FontSize="22"
+                            Width="25"
+                            Height="25"
+                            Margin="0 0 20 0"
+                            BorderBrush="Transparent"
+                            BorderThickness="1"
+                            HorizontalAlignment="Right"
+                            VerticalAlignment="Center"
+                            Background="Transparent"
+                            Foreground="#000000"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            >
+
+                                </Button>
+                            </Grid>
+                            <Border CornerRadius="10"
+                            BorderBrush="LightGray"
+                            Background="LightGray"
+                            Margin="10 10 10 10"
+                            Width="auto"
+                            Height="150"
+                        
+                            >
+                                <Border CornerRadius="10"
+                             Background="White"                              
+                            Margin="1"
+                            >
+                                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                                    <Grid Margin="5 5 10 5 "
+                              >
+                                        <ListView Margin="5" Name="WezipeList" SelectionChanged="WezipeList_SelectionChanged">
+                                         
+                                        </ListView>
+
+
+                                    </Grid>
+                                </ScrollViewer>
+                            </Border>
+                            </Border>
+                            <Grid VerticalAlignment="Bottom"
+                          HorizontalAlignment="Stretch">
+                                
+                            </Grid>
+                        </StackPanel>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+
+    </Border>
+</Page>

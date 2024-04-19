@@ -1,0 +1,577 @@
+﻿<Window x:Class="Neme.Windows.WezipelerAddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Neme.Windows"
+        mc:Ignorable="d"
+       Title="Wezipeler goşmak"
+        Height="600" Loaded="Window_Loaded"
+        Icon="../Images/preview 1.png"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="NoResize"
+        Width="1200">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+        
+        
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Buýrukdaky goşundysy*
+            </Label>
+            <Border
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <ComboBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    SelectionChanged="Wezipegoshundy_SelectionChanged"
+                  
+                    Foreground="#035B57"
+                     Width="519"
+                    Padding="16"
+                    Name="Wezipegoshundy"
+                    Height="49"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+
+                </ComboBox>
+            </Border>
+            <Label Grid.Column="1"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Wezipäniň buýrukdaky ady*
+            </Label>
+            <Border Grid.Column="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <ComboBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    SelectionChanged="Wezipeady_SelectionChanged"
+                    Foreground="#035B57"
+                     Width="519"
+                    Name="Wezipeady"
+                    Padding="16"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+
+                </ComboBox>
+            </Border>
+
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Wezipäniň doly ady*
+            </Label>
+            <Border
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <TextBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    
+                    Foreground="#035B57"
+                     Width="519"
+                    Name="Wezipedolyady"
+                    Padding="16"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+
+                </TextBox>
+            </Border>
+            <Label Grid.Column="1"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Maliýeleşdiriş çeşmesi*
+            </Label>
+            <Border
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  Grid.Column="1"
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <ComboBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    
+                    Foreground="#035B57"
+                     Width="519"
+                    Name="Maliyecesme"
+                    Padding="6"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+                   
+
+                </ComboBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Wezipäniň görnüşi*
+            </Label>
+            <Border
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <TextBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                   IsReadOnly="True"
+                    Foreground="#035B57"
+                     Width="519"
+                    Name="Wezipegornush"
+                    Padding="16"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+            
+                </TextBox>
+            </Border>
+            <Label Grid.Column="1"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Wezipäniň harby/ýörite adynyň görnüşi*
+            </Label>
+            <Border Grid.Column="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <ComboBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    
+                    Foreground="#035B57"
+                     Width="519"
+                    Name="WezipeHarbyYoriteAdyGornush"
+                    Padding="6"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+                    <ComboBoxItem>Harby</ComboBoxItem>
+                    <ComboBoxItem>Polisiýa</ComboBoxItem>
+                    <ComboBoxItem>Lukmançylyk</ComboBoxItem>
+                    <ComboBoxItem>Içerki gulluk</ComboBoxItem>
+
+                </ComboBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Wezipäniň harby/ýörite ady*
+            </Label>
+            <Border Grid.Column="0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <ComboBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    
+                    Foreground="#035B57"
+                     Width="519"
+                    Name="WezipeHarbyYoriteAdy"
+                    Padding="16"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+                    <ComboBoxItem>Hatarçy</ComboBoxItem>
+                    <ComboBoxItem>Kiçi seržant</ComboBoxItem>
+                    <ComboBoxItem>Seržant</ComboBoxItem>
+                    <ComboBoxItem>Uly seržant</ComboBoxItem>
+                    <ComboBoxItem>Kiçi leýtenant</ComboBoxItem>
+                    <ComboBoxItem>Leýtenant</ComboBoxItem>
+                    <ComboBoxItem>Uly leýtenant</ComboBoxItem>
+                    <ComboBoxItem>Kapitan</ComboBoxItem>
+                    <ComboBoxItem>Maýor</ComboBoxItem>
+                    <ComboBoxItem>Podpolkownik</ComboBoxItem>
+                    <ComboBoxItem>Polkownik</ComboBoxItem>
+                    <ComboBoxItem>General maýor</ComboBoxItem>
+                    <ComboBoxItem>General leýtenant</ComboBoxItem>
+                    <ComboBoxItem>General polkownik</ComboBoxItem>
+                               
+                </ComboBox>
+            </Border>
+            <Label Grid.Column="1"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Wezipäniň zähmet haky*
+            </Label>
+            <Border Grid.Column="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <TextBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    IsReadOnly="True"
+                    Foreground="#035B57"
+                   
+                     Width="519"
+                    Name="WezipeZahmetHaky"
+                    Padding="16"
+                    
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+
+                </TextBox>
+            </Border>
+
+        </Grid>
+        <Grid Grid.Row="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Buýruk nomer
+            </Label>
+            <Border Grid.Column="0"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <TextBox
+                    BorderThickness="0"
+                    Background="Transparent"                    
+                    Foreground="#035B57"
+                    Width="519"
+                    Name="Buyruknumber"
+                    Padding="16"
+                    Height="49"
+                    IsReadOnly="True"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+                    
+                </TextBox>
+            </Border>
+            <Label Grid.Column="1"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Buýruk sene
+            </Label>
+            <Border Grid.Column="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <DatePicker
+                    BorderThickness="0"
+                    Background="Transparent"
+                    IsEnabled="False"
+                    Foreground="#035B57"                   
+                    Width="519"
+                    Name="Buyruksene"
+                    Padding="16"                    
+                    Height="49"
+                    VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+                </DatePicker>
+            </Border>
+
+        </Grid>
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Wezipäniň sany*
+            </Label>
+            <Border
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <TextBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    PreviewTextInput="WezipeSany_PreviewTextInput"
+                    Foreground="#035B57"
+                    Name="WezipeSany"
+                     Width="519"
+                    Padding="16"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+
+                </TextBox>
+            </Border>
+            <Label Grid.Column="1"
+                        Foreground="#035B57"
+                        Margin="20 0 0 0"
+                        FontFamily="DM Sans"
+                        VerticalAlignment="Top"
+                        HorizontalAlignment="Left"
+                        FontSize="14"                        
+                        >
+                Yzygiderligi*
+            </Label>
+            <Border Grid.Column="1"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Left"
+                    CornerRadius="0"
+                    Margin="20 30 20 0"
+                    MaxWidth="3050"
+                    MaxHeight="50"
+                  
+                    BorderBrush="#035B57"
+                    BorderThickness="1"
+                    >
+                <TextBox
+                    BorderThickness="0"
+                    Background="Transparent"
+                    PreviewTextInput="WezipeYzygiderlik_PreviewTextInput"
+                    Foreground="#035B57"
+                     Width="519"
+                    Name="WezipeYzygiderlik"
+                    Padding="16"
+                    Height="49"
+                         VerticalAlignment="Stretch"
+                    HorizontalAlignment="Stretch"
+                    >
+
+                </TextBox>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Button                 
+                    MaxWidth="266"
+                    MaxHeight="46"
+                    MinHeight="40"
+                    MinWidth="266"
+                    FontSize="20"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="0 0 0 0"
+                    Foreground="White"
+                    FontFamily="DM Sans"
+                    Background="#035B57"
+                    BorderThickness="0"    
+                    Name="Save"
+                    Click="Save_Click"
+                    Content="Hasaba al"
+                    FontWeight="Bold"
+
+                    >
+                <Button.Resources>
+                    <Style TargetType="{x:Type Button}">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border x:Name="border"
+                                                        CornerRadius="0"
+                                                        BorderThickness="1"
+                                                        Background="#035B57"
+                                                        BorderBrush="#035B57"  >
+                                        <ContentPresenter x:Name="ButtonContentPresenter"
+                                                                      VerticalAlignment="Center"
+                                                                       HorizontalAlignment="Center" />
+                                    </Border>
+
+                                    <ControlTemplate.Triggers>
+
+
+                                        <Trigger Property="IsPressed" Value="True">
+                                            <Setter TargetName="border" Property="Background" Value="White"/>
+                                            <Setter TargetName="border" Property="TextElement.Foreground" Value="#035B57" />
+                                            <Setter TargetName="border" Property="BorderBrush" Value="#035B57" />
+                                        </Trigger>
+
+
+                                    </ControlTemplate.Triggers>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Button.Resources>
+            </Button>
+
+        </Grid>
+    
+        
+    </Grid>
+</Window>
