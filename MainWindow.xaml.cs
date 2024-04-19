@@ -46,9 +46,7 @@ namespace Neme
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
 
-
             Task task1 = Task.Run(() => Get_Byiduser(URLs.URL_Get_Byiduser));
-
 
         }
 
@@ -81,9 +79,6 @@ namespace Neme
                                        
                                         image.Source = bitmap;
 
-
-
-                         
 
                                     });
 
@@ -119,7 +114,6 @@ namespace Neme
             {
                 MessageBox.Show("Tokeniň wagty gutardy, programmany täzeden açyň!");
             }
-
 
         }
 

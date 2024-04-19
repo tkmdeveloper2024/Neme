@@ -44,8 +44,8 @@ namespace Neme.Classes
         public static string URL_Add_Mudirlik = Staticvars.server_ip + "/api/zahmet/mudirlik/add/";
         public static string URL_Get_Byid_Mudirlik = Staticvars.server_ip + "/api/zahmet/mudirlik/get/";
         public static string URL_Update_Mudirlik = Staticvars.server_ip + "/api/zahmet/mudirlik/update/";
-        //public static string URL_Get_All_Mudirlik = Staticvars.server_ip + "/api/zahmet/mudirlik/all/?hukuk=&search=&sort=asc&limit=10&page=";
-        public static string URL_Get_All_Mudirlik = Staticvars.server_ip + "/api/zahmet/wezipeler/count/by-gornush";
+        public static string URL_Get_All_Mudirlik = Staticvars.server_ip + "/api/zahmet/mudirlik/all/?hukuk=&search=&sort=asc&limit=10&page=";
+        //public static string URL_Get_All_Mudirlik = Staticvars.server_ip + "/api/zahmet/wezipeler/count/by-gornush";
 
         public static string URL_Get_All_Hukuk = Staticvars.server_ip + "/api/zahmet/hukuk/all/?search=&limit=10&page=";
 

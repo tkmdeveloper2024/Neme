@@ -30,7 +30,7 @@ namespace Neme.Pages
     {
         public static DataGrid dataGrid_Gosundylar;
         public static Label Counterlbl;
-       public static int id = 0;
+        public static int id = 0;
         public static List<WezipeGornush> Wezipegornushlist = new List<WezipeGornush>();
 
         public Gosundylar()

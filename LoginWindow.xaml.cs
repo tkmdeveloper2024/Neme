@@ -123,7 +123,8 @@ namespace Neme
                                         if (isopened == false)
                                         {
                                             MainWindow mw = new MainWindow();
-                                            mw.Show(); isopened = true;
+                                            mw.Show();
+                                            isopened = true;
                                             this.Close();
                                         }
                                     }
